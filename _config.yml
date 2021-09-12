@@ -19,7 +19,7 @@ timezone: Asia/Seoul
 
 title: Yugeeklab                          # the main title
 
-tagline: A text-focused Jekyll theme   # it will display as the sub-title
+tagline: Student   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   A minimal, portfolio, sidebar,
@@ -81,7 +81,7 @@ theme_mode:   # [light|dark]
 img_cdn: ''
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://cdn.jsdelivr.net/gh/cotes2020/chirpy-images/commons/avatar.jpg
+avatar: ./assets/img/avatar/avatar.png
 
 # boolean type, the global switch for ToC in posts.
 toc: true
