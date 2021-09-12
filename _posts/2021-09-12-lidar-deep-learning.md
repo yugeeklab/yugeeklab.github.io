@@ -1,6 +1,6 @@
 ---
 title: (Paper) Deep Learning for LiDAR 
-date: 2021-09-12 23:11:00
+date: 2021-09-12 23:11:00 +0900
 categories: [Paper, LiDAR]
 tags: [lidar]     # TAG names should always be lowercasetitle
 ---
