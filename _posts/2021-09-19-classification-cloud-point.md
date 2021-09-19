@@ -3,6 +3,7 @@ title: "(Paper) PointNet : raw cloud point as input"
 date: 2021-09-19 23:11:00 +0900
 categories: [Paper, Cloud Point]
 tags: [cloud point]
+math: true
 ---
 
 
@@ -38,6 +39,7 @@ PointNet을 설명하기 전에 Classification 문제의 기본 구조를 설명
 ## Metric
 
 Classification에는 보통 accuracy가 사용된다.
+
 $$
 \frac{TP+TN}{TP+TN+FP+FN}
 $$
@@ -82,6 +84,7 @@ cloud point는 Transform에 불변하다고 했다. 이 논문의 저자는 inpu
 이를 위해 T-Net이 사용된다. 사실상 **Data Augmentation**이라고 봐도 될 것 같다. 
 
 또 feature에 적용되는 Transform에는 특별한 제약사항이 걸린다.
+
 $$
 L_{reg} = ||I - AA^T ||^2_F
 $$
@@ -89,5 +92,6 @@ $$
 $$
 AA^T{를} I{에 가깝게 만들겠다는 뜻이다.}
 $$
+
 즉 A가 직교행렬이 되기를 원한다. A가 직교행렬이 되면 [A를 적용한 변환](https://mathworld.wolfram.com/OrthogonalTransformation.html)은 벡터의 길이를 보존하고 벡터 사이의 각도도 보존한다. 이러한 제약을 거는 이유는 feature space의 크기가 커 변환 매트릭스 A의 최적화가 어렵기 때문이다.
 
