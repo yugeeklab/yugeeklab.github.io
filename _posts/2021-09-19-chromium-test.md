@@ -69,19 +69,21 @@ js로 된 테스트 파일을 수정하거나 작성하려고 하면 아래 두�
 
 js-test는 아래와 같은 script를 import하는 것으로 시작한다.
 
-<script src="../resources/js-test.js"></script>
+`<script src="../resources/js-test.js"></script>`
 
 하지만 js-test는 오래된 것이다. 나같은 경우 리뷰어가 js-test 파일을 아래에서 설명할 test harness로 바꿔주면 고맙겠다고 말했다.
 
 ##### Test Harness
 
 test harness는 아래와 같은 script를 import하는 것으로 시작한다.
-
+```javascript
 <script src="../resources/testharness.js"></script>
 <script src="../resources/testharnessreport.js"></script>
+```
 
 그리고 아래와 같이 3개 타입의 테스트를 작성할 수 있다.
 
+```javascript
 <script>
 // Synchronous test example.
 test(() => {
@@ -102,6 +104,8 @@ promise_test(() => {
         assert_true(value);
     }); }, 'The literal true used to resolve a Promise');
 </script>
+```
+
 
 #### Reference Tests
 
