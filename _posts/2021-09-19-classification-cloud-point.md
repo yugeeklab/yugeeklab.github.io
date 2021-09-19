@@ -1,5 +1,5 @@
 ---
-title: (Paper) PointNet : raw cloud point as input
+title: "(Paper) PointNet : raw cloud point as input"
 date: 2021-09-19 23:11:00 +0900
 categories: [Paper, Cloud Point]
 tags: [cloud point]
