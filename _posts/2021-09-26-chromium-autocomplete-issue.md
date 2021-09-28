@@ -9,7 +9,7 @@ tags: [chromium, issue]
 
 # Issue 설명
 
-![image-20210926154849732](../assets/img/2021-09-26-chromium-autocomplete-issue/image-20210926154849732.png)
+![image-20210926154849732](../../assets/img/2021-09-26-chromium-autocomplete-issue/image-20210926154849732.png)
 
 위 사진은 Issue를 보고한 분이 올려준 html 파일이다. 설명은 간단하다.
 
@@ -42,11 +42,11 @@ tags: [chromium, issue]
 
 여기서 대략 짐작되는 여러가지 키워드를 검색했다. 나는 여러 키워드를 검색해보았는데 그 중 datalist라는 키워드가 길을 찾게 해주었다.
 
-![image-20210926160244553](../assets/img/2021-09-26-chromium-autocomplete-issue/image-20210926160244553.png)
+![image-20210926160244553](../../assets/img/2021-09-26-chromium-autocomplete-issue/image-20210926160244553.png)
 
 위처럼 여러 결과가 나온다. 페이지를 넘겨가며 하나 하나 봐주면 된다. 일단 내가 고칠 파일은 html 파일은 아닐테고 cc 파일일 것이다. cc파일을 위주로 보던 중 심상치 않은 녀석을 발견했다.
 
-![image-20210926160647389](../assets/img/2021-09-26-chromium-autocomplete-issue/image-20210926160647389.png)
+![image-20210926160647389](../../assets/img/2021-09-26-chromium-autocomplete-issue/image-20210926160647389.png)
 
 뭔가 냄새가 술술 풍기지 않는가? 일단 들어가본다. 들어가보면 엄청난 양의 소스코드가 존재한다. 이 중 심상치 않은 함수명을 발견한다.
 

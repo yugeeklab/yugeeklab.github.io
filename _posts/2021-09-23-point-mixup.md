@@ -20,7 +20,7 @@ math: true
 
 # Shortest-path Interpolation
 
-![image-20210926181053486](../assets/img/2021-09-23-point-mixup/image-20210926181053486.png)
+![image-20210926181053486](../../assets/img/2021-09-23-point-mixup/image-20210926181053486.png)
 
 
 위의 그림과 같이 shortest interpolation을 하면 라벨을 보다 합리적으로 믹스할 수 있다. 오른쪽 그림의 경우 믹스한 것들끼리 중복될 여지가 있다. 라벨은 전혀 다른데 말이다.
