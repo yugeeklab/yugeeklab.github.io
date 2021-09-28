@@ -70,11 +70,11 @@ DLOG(INFO) << "test";
 
 이 이슈를 해결하기 위해 다름과 같은 알고리즘을 만들었다.
 
-1. split input into "40m" and "autoreel"
-   2. for each element("40m", "autoreel")
-       2-1. transform target into trans_target("hozelockautoreel40m")
-       2-2. find element from tran_target
-       2-3. if not found, break
+* split input into "40m" and "autoreel"
+* for each element("40m", "autoreel")
+  * transform target into trans_target("hozelockautoreel40m")
+  * find element from tran_target
+  * if not found, break
 
 위와 같이 코드를 짠 다음에 로컬에서 빌드했을 때 제대로 돌아가는 것을 확인했다. 하지만 리뷰를 요청했을 때 몇개의 테스트에서 에러가 발생하는 것을 확인했고, 그 에러는 아무것도 입력되지 않았을 때 전체 옵션이 떠야하는데 내가 짠 코드는 무언가 입력되기 전까지는 아무런 동작도 하지 않았다.
 

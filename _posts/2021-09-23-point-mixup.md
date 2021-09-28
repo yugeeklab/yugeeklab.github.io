@@ -30,6 +30,7 @@ math: true
 shortest interpolation을 어떻게 구현하나요? 이 논문에서는 Earth Mover's Distance를 사용한다.
 
 두 확률 분포간 거리를 구하는 것에는 많은 방법이 있다. 수업 시간에 배운 KL 다이벌전스도 그 중 하나다. Earth Mover's Distance는 A라는 확률 분포를 B라는 확률 분포랑 같게 만들기 위해 필요한 최소양이다. 
+
 $$
 {\phi^*} = argmin_{\phi} \sum_i||x_i - y_{\phi(i)}||_2
 $$
@@ -42,10 +43,13 @@ $$
 # Optimal assignment interpolation
 
 Optimal assignment란 Earth Mover's Distance를 구하는 과정에서 생성된 매칭이다.
+
 $$
 즉 \phi^*을 뜻한다.
 $$
+
 그리고 다음과 같이 Mix한다.
+
 $$
 S_{OA}^{(\lambda)} = \{(1-\lambda)\cdot x_i + \lambda \cdot y_{\phi^*(i)}\}_{i=1}^N
 $$
@@ -57,6 +61,7 @@ $$
 # Manifold PointMixup: Interpolate between latent point features
 
 feature 단에서 Mixup을 할 수도 있다.
+
 $$
 Z_{(l), OA}^{(\lambda)} = \{(x_i^{mix}, z_i^{mix})\},\\ x_i^{mix} = (1-{\lambda}) \cdot x_i + \lambda \cdot y_{\phi^*(i)}, \\ z_i^{mix} = (1-\lambda) \cdot z_i^{(x)} + \lambda \cdot z_{\phi^*(i)}^{(y)}
 $$
