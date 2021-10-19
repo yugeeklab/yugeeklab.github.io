@@ -1,7 +1,7 @@
 ---
 published: true
 title: (Chromium) Report input type date bug
-date: '2021-10-19 15:44:00 +0900'
+date: '2021-10-19 13:00:00 +0900'
 categories:
   - Chromium
   - Issue
