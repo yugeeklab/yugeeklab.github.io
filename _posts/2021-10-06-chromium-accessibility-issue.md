@@ -1,8 +1,13 @@
 ---
-title: "(Chromium) Fix accessibility bug for date_time_field"
-date: 2021-10-05 15:44:00 +0900
-categories: [Chromium, Issue]
-tags: [chromium, issue]
+title: (Chromium) Fix accessibility bug for date_time_field
+date: '2021-10-05 15:44:00 +0900'
+categories:
+  - Chromium
+  - Issue
+tags:
+  - chromium
+  - issue
+published: true
 ---
 
 크로미움에서 해결한 두번째 이슈다.
@@ -13,7 +18,7 @@ Accessibility란 장애를 가지고 있는 사람들도 장애를 가지고 있
 
 # Issue 설명
 
-## psudo-element
+## pseudo-element
 
 ## aria attribute
 
