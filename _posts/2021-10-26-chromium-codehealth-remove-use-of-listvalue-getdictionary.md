@@ -2,11 +2,11 @@
 title: "(Chromium) CodeHealth : Remove use of ListValue::GetDictionary()"
 date: 2021-10-26T07:36:19.834Z
 categories:
-  - chromium
-  - issue
-tags:
   - Chromium
   - Issue
+tags:
+  - chromium
+  - issue
 math: false
 ---
 ## Code Health Issue 란
