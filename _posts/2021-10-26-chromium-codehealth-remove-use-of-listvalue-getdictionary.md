@@ -62,13 +62,18 @@ In "base/containers/checked_range.h"
 // <https://eel.is/c++draft/container.requirements.general#def:contiguous_container>
 ```
 
-
-
 > And I can find there's also death test in "checked_range_unitttest.cc"
+
 ```
 TEST(CheckedContiguousRange, OutOfBoundsDeath) {
-
-std::vector<int> empty_vector; CheckedContiguousRange<std::vector<int>> empty_range(empty_vector); ASSERT_DEATH_IF_SUPPORTED(empty_range\[0], ""); ASSERT_DEATH_IF_SUPPORTED(empty_range.front(), ""); ASSERT_DEATH_IF_SUPPORTED(empty_range.back(), ""); static constexpr int array\[] = {0, 1, 2}; constexpr CheckedContiguousRange<const int\[3]> range(array); ASSERT_DEATH_IF_SUPPORTED(range\[3], ""); }
+std::vector<int> empty_vector; CheckedContiguousRange<std::vector<int>> empty_range(empty_vector);
+ASSERT_DEATH_IF_SUPPORTED(empty_range[0], "");
+ASSERT_DEATH_IF_SUPPORTED(empty_range.front(), "");
+ASSERT_DEATH_IF_SUPPORTED(empty_range.back(), "");
+static constexpr int array[] = {0, 1, 2};
+constexpr CheckedContiguousRange<const int[3]> range(array);
+ASSERT_DEATH_IF_SUPPORTED(range[3], "");
+}
 ```
 
 리뷰가 잘 끝났고 Merge가 완료되었다.
