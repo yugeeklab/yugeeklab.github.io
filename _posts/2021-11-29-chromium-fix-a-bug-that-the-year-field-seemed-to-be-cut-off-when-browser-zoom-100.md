@@ -1,0 +1,35 @@
+---
+title: (Chromium) Fix a bug that the year field seemed to be cut off when
+  browser zoom > 100%
+date: 2021-11-29T07:46:23.074Z
+categories:
+  - Chromium
+  - Issue
+tags:
+  - chromium
+  - issue
+math: true
+---
+# 서론
+
+오늘도 어김없이 이슈를 찾으러 다니던 와중, 좀 흥미가 가는 이슈를 발견했다.
+
+정상적인 화면은 아래와 
+
+![](https://00f74ba44bbeab67337c8b1a474e9d4c764fbe08f5-apidata.googleusercontent.com/download/storage/v1/b/monorail-prod.appspot.com/o/16%2Fattachments%2Fe0d415e6-8f4a-4499-b14d-64383e1dbd8d?jk=AFshE3Wqk2SAYeFLn4cDWDa-iBQoahSpQMRObVJkU6YyrUJFNyhkI3-afpB78HPwBi-LKNod1acDPyd3SmXscDrbTM839Z-WkagC8xeLPzWvgRbyELMzlGcZKzPndHBRSOfaQTn0o4zIsKHkCKH9F9UvzAW8FGStTXDYTcXaiZxMD-_Wvbwolq2i-7Zaj4zCv89sRZ3KKbQiiagECL_wv7aZBLBuOQ9E8mtgd4UtTMCED3gUlnedvGMocj0MQTd0By56PFKqNDutPHZ0WSUERIl6vAlXYfW32QHCvqKsMPCbEfIRMERzDX6fAurEi7x9CzMh0-GRO-oof425MkISZscUMmJSaUH6h8RlLT4XP-V0MFaebtvWeMm2Sn6_M7eYnWFhPcSnY-eRs_A-195YyaZFndBTNTZGZeEJ_1rEygCVYkv51dt2y7kER460iYvOdOAWqxZ-14PWsGctJcNffOqCnhiHDD1s-ZMqNDEiOIY5qmGcSLN93_0XTb22Tu2Pi-48wx9kTWI8qLAvHN-igq6XTPj6tuEvcQ3Y64dxrUFvxLlb5d7QPbPFyXWnsXkaZZ2N6Ldq4b8wbMnP14z0GjPv7j65HU5qZFhabdBXurHUPs8hnbgRAMvgbwh4MdeV_3PI5dktJPtON7IolP2Dt6fKuhEmJHnVToBlBaxG8kvTGhtJAoH07yjisHSuvTFdCaQc8NuyzdSRlpESoCXTFPX1Fy1WUGu7crgaVblmqyPMva8-b5Rx1XR0AgnbYkdbtO_pxyej_Wrb_s-ZtFtZ54eXB3hmaA9khp9E7QoHJFMt956xJvFA_NaZ7tjxKBZygMTFN6ztYbSqdjrOlIKIzwam8WpUFXYOg00rIpJltBGr6q3skl75GuqivL37KJUV0ZtbfxtnwRpXL-rHcdjnk4SUz7zVs7ryzyXzNPr3kZNYiEOlRHsgppQqKdxvskSm3MymwxV3a2VKJ0mpmvS6LQ3_FrnLx9pXHn5UE3EMYPDRRZEFO5I1c7LHQfH9z9X6i8x79-gSMQwKjsZ3BDRMeCqsnDftS6T6JUrk2WolrmiAzTX8Jo7Xpc7tFkmUmOetB6QeUAdfTJlt0BTaDpnfahwmQMuP-fDZrbvo424POPQBi6CfqS7ZqyXM4OusckiTdRuz2Nf_pFiA5nFxsk2Skdhp3LIzlBfJqBJEFVi4zmISGds3aI4VqCXTWfAliyDlf0E2tAWrL-Y0mhdEjuPieUV3dQFrl_IyDT9-09oxJGo_Kmg1wIFkgu-MC0n8Fh6TZH-yUgPE7GR2bcepMTdtsoyHrNmfuWePw_1xKlOwr1u3joJNcVlbr_jh6sYwijV9eDfmPP2bcWdnKejW4IIl1km6BE_rCVet_oSRpW9ttDHyW6eEq3r8KYL2I1kV2fuhyQF9GQ474-Dy906rc6bWF7nQC_gedUN7cMZx-yko54x3xsSZFV7sdGjQt3CSmwtsU0hyJ3dA5qrjBPDJY3ivdAUNQJJhxGmp6qkmKdr51Dn8RRy7lXRpcV4yDCIev-Jv8fezRvkyr_5leKsTSwElk-DtqTQhyE6SIzx45P32uYBV-vOhto94OLDQNqIRHC84ossGjWOzTXO98sw7v4N-iRKfJMh_ljzZO-7f9y4hgf70H2v_JmspT0nw2kGVkOtjMKYRBfGN1OtRetHWwUKqNiDqcaR4)
+
+줌을 땡기면 갑자기
+
+![](https://bugs.chromium.org/p/chromium/issues/attachment?aid=410184&signed_aid=hWSnXxybJAxPxY3DtuUI8Q==&inline=1&thumb=1)
+
+위와 같이 y가 잘리는 현상이 발생한다.
+
+
+
+이 이슈를 해결해보고자 한다.
+
+
+
+# 본론
+
+현재 디버깅 결과, Padding으로 더해진 값이 브라우저가 확대되면 같이 커져야하는데 커지지 않는 현상을 발견했고 맥락에 맞게 수정 중이다.
