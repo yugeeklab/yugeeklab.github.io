@@ -2,9 +2,11 @@
 title: (Chromium) Fix a bug that marker pseudo-element is adding extra margin-right
 date: 2021-11-29T07:20:59.171Z
 categories:
-  - chromium
-tags:
   - Chromium
+  - Issue
+tags:
+  - chromium
+  - issue
 math: true
 ---
 # 서론
