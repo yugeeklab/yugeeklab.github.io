@@ -94,3 +94,7 @@ Go 코드는 동작 및 성능 측면에서 목표를 달성하는 가장 간단
 예를 들어, 기본 값이 바인딩 된 플래그를 포함하는 프로덕션 코드가 있으며, 테스트에서 재정의해야하는 경우, 프로그램의 커맨드라인 인터페이스 자체를 테스트할 의도가 없다면(os/exec와 같은), flag.Set을 사용하여 오버라이드하기보다는 바인딩된 값을 직접 오버라이드하는 것이 더 간단하고 따라서 선호됩니다.
 
 마찬가지로, 코드가 set membership check를 필요로 하는 경우 불린 값 맵(예: `map[string]bool`)이 충분합니다. 집합과 같은 유형 및 기능을 제공하는 라이브러리는 맵으로 불가능하거나 너무 복잡한 작업이 필요한 경우에만 사용해야 합니다.
+
+<aside> 💡 본 글은 [https://google.github.io/styleguide/go/guide](https://google.github.io/styleguide/go/guide%EB%A5%BC)번역한 글입니다.
+
+</aside>
