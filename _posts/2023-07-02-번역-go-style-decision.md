@@ -54,7 +54,7 @@ util, utility, common, helper와 같은 의미가 없는 패키지 이름을 피
 
 더 자세한 내용은 Go 블로그의 "[패키지 이름에 관한](https://go.dev/blog/package-names)" 게시물을 참조하세요.
 
-## ****Receiver names****
+## **Receiver names**
 
 리시버 변수 이름은 다음과 같아야 합니다:
 
