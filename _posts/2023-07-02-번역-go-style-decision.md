@@ -169,3 +169,8 @@ const (
     - **`io.Writer`**나 **`http.ResponseWriter`**의 경우 **`w`**를 사용합니다.
 - 한 글자 식별자는 정수 루프 변수에 적합하며, 특히 인덱스(**`i`**)나 좌표(**`x`**와 **`y`**)에 사용됩니다.
 - 범위가 짧은 경우에는 약어를 사용할 수도 있습니다. 예를 들어 **`for _, n := range nodes { ... }`**와 같이 사용할 수 있습니다.
+
+<aside>
+💡 본 글은 https://google.github.io/styleguide/go/decisions를 번역한 글입니다.
+
+</aside>
