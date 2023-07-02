@@ -7,7 +7,7 @@ tags:
   - golang
 math: false
 ---
-# 소개
+# **소개**
 
 이 문서에는 Go 가독성 멘토들의 제시한 조언에 대한 표준 가이드, 설명 및 예제를 통합 및 제공하기 위한 스타일 결정이 포함되어 있습니다.
 
@@ -23,11 +23,11 @@ Formatting: guide#formatting 참조
 
 Line Length: guide#line-length 참조
 
-# 네이밍
+# **네이밍**
 
 네이밍에 대한 개요는 핵심 스타일 가이드 내의 네이밍 섹션을 참조하십시오. 다음 섹션은 네이밍의 구체적인 영역에 대한 추가적인 설명을 제공합니다.
 
-## 언더스코어
+## **언더스코어**
 
 일반적으로 Go에서는 이름에 언더스코어를 포함하지 않아야 합니다. 이 원칙에는 세 가지 예외가 있습니다:
 
@@ -35,7 +35,7 @@ Line Length: guide#line-length 참조
 2. *_test.go 파일 내의 테스트, 벤치마크 및 예제 함수 이름에는 언더스코어를 포함할 수 있습니다.
 3. 운영 체제 또는 cgo와 상호 작용하는 저수준 라이브러리는 syscall에서처럼 식별자를 재사용할 수 있습니다. 대부분의 코드베이스에서는 매우 드물 것으로 예상됩니다.
 
-패키지 이름
+## **패키지 이름**
 
 Go 패키지 이름은 짧아야 하며 소문자만을 포함해야 합니다. 여러 단어로 구성된 패키지 이름은 모두 소문자로 유지되어야 합니다. 예를 들어, 패키지 이름이 tabwriter인 경우에는 tabWriter, TabWriter 또는 tab_writer로 이름을 지정하지 않습니다.
 
@@ -69,7 +69,7 @@ util, utility, common, helper와 같은 의미가 없는 패키지 이름을 피
 | func (this *ReportWriter) | func (w *ReportWriter) |
 | func (self *Scanner) | func (s *Scanner) |
 
-## 상수 이름
+## **상수 이름**
 
 상수 이름은 Go 언어에서 다른 모든 이름과 마찬가지로 MixedCaps 형식을 사용해야 합니다. (Exported 상수는 대문자로 시작하고, unexported 상수는 소문자로 시작합니다.) 이는 다른 언어의 관례를 어길 때에도 적용됩니다. 상수 이름은 값의 파생물이 아니라 값이 무엇을 나타내는지 설명해야 합니다.
 
@@ -172,5 +172,4 @@ const (
 
 <aside>
 💡 본 글은 https://google.github.io/styleguide/go/decisions를 번역한 글입니다.
-
 </aside>
